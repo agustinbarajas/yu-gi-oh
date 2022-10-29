@@ -1,3 +1,9 @@
-<div class="search-container">
-  <input class="search-input" type="search" placeholder="Search..." autofocus />
-</div>
+<section class="main-container">
+  <div class="search-container">
+    <input class="search-input" type="search" placeholder="Search..." autofocus />
+  </div>
+
+  <div class="cards-container">
+    <app-card *ngFor="let card of [1,2,3,4,5,6]"></app-card>
+  </div>
+</section>
