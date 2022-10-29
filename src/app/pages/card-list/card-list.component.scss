@@ -1,0 +1,16 @@
+.search-container {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-center;
+  @apply w-screen;
+  @apply my-4;
+
+  .search-input {
+    @apply w-9/12;
+    @apply py-2;
+    @apply px-3;
+    @apply border;
+    @apply border-slate-300;
+    @apply rounded-lg;
+  }
+}
