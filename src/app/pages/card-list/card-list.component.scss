@@ -3,7 +3,9 @@
   @apply flex-col;
   @apply justify-center;
   @apply items-center;
-  @apply w-screen;
+  @apply w-full;
+  @apply my-4;
+  @apply gap-3;
 }
 
 .search-container {
@@ -11,7 +13,6 @@
   @apply flex-row;
   @apply justify-center;
   @apply w-screen;
-  @apply my-4;
 
   .search-input {
     @apply w-9/12;
