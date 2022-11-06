@@ -4,6 +4,6 @@
   </div>
 
   <div class="cards-container">
-    <app-card *ngFor="let card of [1,2,3,4,5,6]"></app-card>
+    <app-card *ngFor="let card of cards" [card]="card"></app-card>
   </div>
 </section>
