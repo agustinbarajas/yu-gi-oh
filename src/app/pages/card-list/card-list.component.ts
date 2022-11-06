@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CardService} from "../../services/card.service";
 import {Card} from "../../interfaces/card.interface";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-card-list',
@@ -9,6 +10,7 @@ import {Card} from "../../interfaces/card.interface";
 })
 export class CardListComponent implements OnInit {
   cards: Card[] = [];
+  searchControl = new FormControl();
 
   constructor(private readonly cardService: CardService) {
   }

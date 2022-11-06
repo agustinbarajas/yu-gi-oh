@@ -1,6 +1,12 @@
 <section class="main-container">
   <div class="search-container">
-    <input class="search-input" type="search" placeholder="Search..." autofocus />
+    <input
+      class="search-input"
+      type="search"
+      placeholder="Search..."
+      [formControl]="searchControl"
+      autofocus
+    />
   </div>
 
   <div class="cards-container">
