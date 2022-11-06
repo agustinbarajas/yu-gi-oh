@@ -12,10 +12,14 @@ export class CardService {
   constructor(private readonly http: HttpClient,) {
   }
 
-  searchCards(): Observable<Card[]> {
+  searchCards(searchValue?: string): Observable<Card[]> {
+    const params: any = {num: 10, offset: 0};
+    if (searchValue) {
+      params['fname'] = searchValue;
+    }
     return this.http.get<{ data: Card[] }>(
       this.CARD_ENDPOINT,
-      {params: {num: 10, offset: 0}}
+      {params}
     ).pipe(map(({data}: { data: Card[] }) => data));
   }
 }
