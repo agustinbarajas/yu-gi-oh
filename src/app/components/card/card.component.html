@@ -1,3 +1,8 @@
 <article class="card">
-  <img class="card__image" [src]="card.card_images[0].image_url" alt="Show a Yu-Gi-Oh card"/>
+  <img
+    class="card__image"
+    [src]="card.card_images[0].image_url"
+    alt="Show a Yu-Gi-Oh card"
+    [routerLink]="'card/' + card.id"
+  />
 </article>
