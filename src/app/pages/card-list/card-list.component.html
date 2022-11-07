@@ -1,7 +1,7 @@
-<section class="main-container">
-  <div class="search-container">
+<section class="cards">
+  <div class="cards__search">
     <input
-      class="search-input"
+      class="cards__search-input"
       type="search"
       placeholder="Search..."
       [formControl]="searchControl"
@@ -9,7 +9,7 @@
     />
   </div>
 
-  <div class="cards-container">
+  <div class="cards__list">
     <app-card *ngFor="let card of cards" [card]="card"></app-card>
   </div>
 </section>

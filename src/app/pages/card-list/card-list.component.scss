@@ -1,4 +1,4 @@
-.main-container {
+.cards {
   @apply flex;
   @apply flex-col;
   @apply justify-center;
@@ -6,27 +6,27 @@
   @apply w-full;
   @apply my-4;
   @apply gap-3;
-}
 
-.search-container {
-  @apply flex;
-  @apply flex-row;
-  @apply justify-center;
-  @apply w-screen;
+  &__search {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-center;
+    @apply w-screen;
 
-  .search-input {
-    @apply w-9/12;
-    @apply py-2;
-    @apply px-3;
-    @apply border;
-    @apply border-slate-300;
-    @apply rounded-lg;
+    &-input {
+      @apply w-9/12;
+      @apply py-2;
+      @apply px-3;
+      @apply border;
+      @apply border-slate-300;
+      @apply rounded-lg;
+    }
   }
-}
 
-.cards-container {
-  @apply grid;
-  @apply grid-cols-auto-fit-12;
-  @apply gap-2;
-  @apply w-3/4;
+  &__list {
+    @apply grid;
+    @apply grid-cols-auto-fit-12;
+    @apply gap-2;
+    @apply w-3/4;
+  }
 }
