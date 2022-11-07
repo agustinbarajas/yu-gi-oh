@@ -22,4 +22,13 @@ export class CardService {
       {params}
     ).pipe(map(({data}: { data: Card[] }) => data));
   }
+
+  getCard(cardId: string): Observable<Card> {
+    return this.http.get<{ data: Card[] }>(
+      this.CARD_ENDPOINT,
+      {params: {id: cardId}})
+      .pipe(
+        map(({data}: { data: Card[] }) => data[0]),
+      );
+  }
 }
