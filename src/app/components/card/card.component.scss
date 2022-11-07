@@ -1,5 +1,5 @@
-.ygo-card {
-  .card-image {
+.card {
+  &__image {
     @apply w-full;
     @apply object-cover;
   }
