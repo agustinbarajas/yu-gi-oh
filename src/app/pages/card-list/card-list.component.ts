@@ -28,9 +28,8 @@ export class CardListComponent implements OnInit {
   }
 
   private searchCards(searchValue?: string) {
-    this.cardService.searchCards(searchValue)
-      .subscribe((cards: Card[]) => {
-        this.cards = cards;
-      });
+    this.cardService.searchCards({ searchValue }).subscribe((cards: Card[]) => {
+      this.cards = [...this.cards, ...cards];
+    });
   }
 }
