@@ -1,31 +1,51 @@
-<section class="detail" *ngIf="card$ | async as card">
-  <img class="detail__image"
-       [src]="card.card_images[0].image_url"
-       alt="Yu gi oh card image"
+<section
+  class="flex flex-col items-center justify-center gap-3 p-3 md:flex-row"
+  *ngIf="card$ | async as card"
+>
+  <img
+    class="object-cover w-full max-w-xs"
+    [src]="card.card_images[0].image_url"
+    alt="Yu gi oh card image"
   />
 
-  <div class="detail__content">
-    <div class="detail__info">
-      <h1 class="detail__info-title">{{ card.name }}</h1>
-      <label class="detail__info-description">{{ card.desc }}</label>
+  <div class="w-full">
+    <div class="pb-3 text-center">
+      <h1 class="text-2xl font-bold tracking-wider break-words align-middle">
+        {{ card.name }}
+      </h1>
+      <label
+        class="text-base italic font-light tracking-tight break-words align-middle"
+        >{{ card.desc }}</label
+      >
 
-      <h2 class="detail__info-subtitle">
-        {{ card.archetype || 'Unknown' }} - {{ card.race }} - {{ card.type }}
+      <h2 class="text-lg font-normal break-words align-middle">
+        {{ card.archetype || "Unknown" }} - {{ card.race }} - {{ card.type }}
       </h2>
     </div>
 
-    <div class="detail__prices">
-      <table class="table">
-        <thead class="table__header">
-          <tr class="table__header-row">
-            <th class="table__header-cell">Store</th>
-            <th class="table__header-cell">Price</th>
+    <div class="w-full">
+      <table class="w-full border border-collapse rounded-lg border-slate-400">
+        <thead class="table-header-group">
+          <tr class="table-row">
+            <th class="py-1 border border-slate-300 bg-slate-200">Store</th>
+            <th class="py-1 border border-slate-300 bg-slate-200">Price</th>
           </tr>
         </thead>
-        <tbody class="table__body">
-          <tr class="table__body-row" *ngFor="let store of card.card_prices[0] | keyvalue">
-            <td class="table__body-cell">{{ store.key }}</td>
-            <td class="table__body-cell">{{ store.value }}</td>
+        <tbody class="table-row-group">
+          <tr
+            class="table-row"
+            *ngFor="let store of card.card_prices[0] | keyvalue"
+          >
+            <td
+              class="table-cell px-3 py-1 border border-slate-300 bg-slate-50"
+            >
+              {{ store.key }}
+            </td>
+            <td
+              class="table-cell px-3 py-1 border border-slate-300 bg-slate-50"
+            >
+              {{ store.value }}
+            </td>
           </tr>
         </tbody>
       </table>
