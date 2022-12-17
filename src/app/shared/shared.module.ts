@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InfiniteScrollDirective } from './directives/infinite-scroll/infinite-scroll.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [InfiniteScrollDirective],
   imports: [CommonModule],
-  exports: [],
+  exports: [InfiniteScrollDirective],
 })
 export class SharedModule {}
