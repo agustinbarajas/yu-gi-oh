@@ -1,5 +1,5 @@
 <section class="flex flex-col items-center justify-center w-full gap-3 my-4">
-  <div class="flex flex-row justify-center w-screen">
+  <div class="sticky top-0 flex flex-row justify-center w-screen">
     <input
       class="w-9/12 px-3 py-2 border rounded-lg border-slate-300"
       type="search"
@@ -9,7 +9,12 @@
     />
   </div>
 
-  <div class="grid w-3/4 gap-2 grid-cols-auto-fit-12">
+  <div
+    class="grid w-3/4 gap-2 grid-cols-auto-fit-12"
+    infinite-scroll
+    [fromRoot]="true"
+    (scrolled)="scrolled()"
+  >
     <app-card *ngFor="let card of cards" [card]="card"></app-card>
   </div>
 </section>
