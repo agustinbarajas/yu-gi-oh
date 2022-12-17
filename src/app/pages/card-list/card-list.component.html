@@ -1,7 +1,7 @@
-<section class="cards">
-  <div class="cards__search">
+<section class="flex flex-col items-center justify-center w-full gap-3 my-4">
+  <div class="flex flex-row justify-center w-screen">
     <input
-      class="cards__search-input"
+      class="w-9/12 px-3 py-2 border rounded-lg border-slate-300"
       type="search"
       placeholder="Search..."
       [formControl]="searchControl"
@@ -9,7 +9,7 @@
     />
   </div>
 
-  <div class="cards__list">
+  <div class="grid w-3/4 gap-2 grid-cols-auto-fit-12">
     <app-card *ngFor="let card of cards" [card]="card"></app-card>
   </div>
 </section>
